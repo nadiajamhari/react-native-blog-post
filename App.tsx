@@ -2,19 +2,21 @@ import React from 'react';
 import {NativeBaseProvider, ScrollView} from 'native-base';
 import {NavigationContainer} from '@react-navigation/native';
 
-import BlogList from './src/components/blog/blogList';
+import BlogList from './src/components/post/postList';
 import TopHeader from './src/components/common/topHeader';
+import Routes from './routes';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <NativeBaseProvider>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Routes />
         <TopHeader />
         <ScrollView>
           <BlogList />
         </ScrollView>
-      </NativeBaseProvider>
-    </NavigationContainer>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 };
 
